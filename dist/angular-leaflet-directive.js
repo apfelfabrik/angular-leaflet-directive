@@ -84,7 +84,7 @@
           }
           // if no event-broadcast attribute, all events are broadcasted
           if (!isDefined(attrs.eventBroadcast)) {
-            var logic = 'broadcast';
+            var logic = 'emit';
             for (var i = 0; i < mapEvents.length; i++) {
               var eventName = mapEvents[i];
               map.on(eventName, genDispatchMapEvent(scope, eventName, logic), { eventName: eventName });
